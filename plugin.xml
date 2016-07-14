@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        id="com.frisb.cordova.plugin.statusbar-hide-on-startup"
+        version="1.0.0">
+
+    <name>statusbar-hide-on-startup</name>
+    <author>Ashley Brener</author>
+    <description>Cordova plugin to hide the statusbar on startup.</description>
+    <keywords>cordova, hybrid, statusbar, startup, status-bar</keywords>
+    <license>MIT</license>
+    <engines>
+        <engine name="cordova" version=">=3.0.0"/>
+    </engines>
+
+    <!-- Android -->
+    <platform name="android">
+
+    </platform>
+
+    <!-- ios -->
+    <platform name="ios">
+        <config-file target="*-Info.plist" parent="UIStatusBarHidden">
+            <true/>
+        </config-file>
+        <config-file target="*-Info.plist" parent="UIViewControllerBasedStatusBarAppearance">
+            <false/>
+        </config-file>
+    </platform>
+</plugin>
